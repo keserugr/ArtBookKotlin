@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ArtBookKotlin</string>
+    <string name="hint_art_name">Enter Art Name</string>
+    <string name="hint_artist_name">Enter Artist Name</string>
+    <string name="hint_year">Enter Year</string>
+    <string name="btn_save">SAVE</string>
+    <string name="htn_search">Search</string>
+</resources>
