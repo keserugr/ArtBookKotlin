@@ -24,6 +24,18 @@ fun ImageView.downloadFromUrl(url: String){
 @BindingAdapter("android:downloadUrl")
 fun downloadImage(view: ImageView, url: String){
     url?.let {
-        view.downloadFromUrl(url)
+       view.downloadFromUrl(url)
     }
 }
+
+/*@Singleton
+class GlideAdapter @Inject constructor(
+    val glide: RequestManager
+){
+    @BindingAdapter("android:downloadUrl")
+    fun downloadImage(view: ImageView, url: String){
+        url?.let {
+            glide.load(it).into(view)
+        }
+    }
+}*/

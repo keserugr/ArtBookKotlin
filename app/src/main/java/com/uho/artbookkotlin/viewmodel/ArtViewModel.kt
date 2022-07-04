@@ -9,6 +9,7 @@ import com.uho.artbookkotlin.model.ImageResponse
 import com.uho.artbookkotlin.repo.IArtRepository
 import com.uho.artbookkotlin.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import java.lang.Exception
 import javax.inject.Inject
@@ -75,5 +76,10 @@ class ArtViewModel @Inject constructor(
             val response =  repository.searchImage(searchString)
             images.value = response
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
     }
 }

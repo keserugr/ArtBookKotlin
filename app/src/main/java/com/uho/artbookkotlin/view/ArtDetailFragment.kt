@@ -1,13 +1,11 @@
 package com.uho.artbookkotlin.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -29,7 +27,7 @@ class ArtDetailFragment @Inject constructor(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(requireActivity()).get(ArtViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity())[ArtViewModel::class.java]
 
         val fragmentBinding = FragmentArtDetailsBinding.bind(view)
         binding = fragmentBinding
