@@ -6,7 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions.click
-import androidx.test.espresso.contrib.RecyclerViewActions
+
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.filters.MediumTest
 import com.atilsamancioglu.artbookhilttesting.getOrAwaitValueTest
@@ -58,11 +58,11 @@ class ImageApiFragmentTest {
             imageRecyclerAdapter.images = listOf(selectedImageUrl)
         }
 
-        Espresso.onView(withId(R.id.rvImages)).perform(
+        /*Espresso.onView(withId(R.id.rvImages)).perform(
             RecyclerViewActions.actionOnItemAtPosition<ImageRecyclerAdapter.ImageViewolder>(
                 0,click()
             )
-        )
+        )*/
 
         Mockito.verify(navController).popBackStack()
 

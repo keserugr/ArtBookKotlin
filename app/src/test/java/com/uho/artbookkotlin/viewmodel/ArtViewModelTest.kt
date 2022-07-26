@@ -50,7 +50,7 @@ class ArtViewModelTest {
 
     @Test
     fun `check year and return error if the year is not integer`(){
-        viewModel.makeArt("Mona Lisa", "Picasso", "1900")
+        viewModel.makeArt("Mona Lisa", "Picasso", "asd")
         val value = viewModel.insertedArtMessage.getOrAwaitValue()
         assertThat(value.status).isEqualTo(Status.ERROR)
     }

@@ -7,7 +7,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.uho.artbookkotlin.R
 
 object Util{
-    const val API_KEY = "25944311-d6f9011245d0aba0c93d23004"
+    const val API_KEY = ""
     const val BASE_URL = "https://pixabay.com/"
 }
 
@@ -23,7 +23,7 @@ fun ImageView.downloadFromUrl(url: String){
 
 @BindingAdapter("android:downloadUrl")
 fun downloadImage(view: ImageView, url: String){
-    url?.let {
+    url.let {
        view.downloadFromUrl(url)
     }
 }
